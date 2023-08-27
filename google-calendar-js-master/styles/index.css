@@ -1,0 +1,402 @@
+@charset "UTF-8";
+.page {
+  height: 100vh;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.button {
+  height: 40px;
+  width: 100px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.button:hover {
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.icon-button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+
+.icon-button:hover {
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.modal {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.modal__content {
+  background: #fff;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(204, 204, 204, 0.2705882353);
+  z-index: 10;
+}
+
+.popup__content {
+  position: absolute;
+  background: #fff;
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.hidden {
+  display: none;
+}
+
+.page {
+  overflow: visible;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff; /* Цвет фона шапки */
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для стилизации */
+  z-index: 10;
+  color: rgb(0, 0, 0);
+  padding: 15px 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header .navigation__displayed-month {
+  font-size: 20px;
+}
+.header .create-event-btn {
+  color: #FFF;
+  background-image: linear-gradient(45deg, #0012d9, #50a7ff);
+  font-weight: 500;
+  margin-right: 30px;
+  border-radius: 25px;
+}
+.header .create-event-btn i {
+  margin-right: 5px;
+}
+.header .navigation__today-btn {
+  font-weight: 600;
+  border-radius: 25px;
+  margin-right: 5px;
+}
+
+.calendar__header {
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: #ffffff; /* Цвет фона шапки */
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для стилизации */
+  color: rgb(101, 101, 101);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 40px;
+  padding-bottom: 10px;
+  gap: 120px;
+}
+.calendar__header .calendar__day-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70px;
+}
+.calendar__header .calendar__day-label .day-label__day-name {
+  padding-top: 10px;
+  font-size: 24px;
+}
+.navigation__nav-icon {
+  color: #535353;
+}
+
+.todayIs {
+  color: #FFF;
+  border-radius: 50%;
+  background-image: linear-gradient(45deg, #0012d9, #50a7ff);
+  width: 70px;
+  height: 70px;
+}
+
+.calendar__week {
+  position: absolute;
+  left: 5%;
+  top: 0.5%;
+  display: -ms-grid;
+  display: grid;
+  width: 93%;
+  height: 100%;
+  -ms-grid-columns: (14.2857142857%)[7];
+  grid-template-columns: repeat(7, 14.2857142857%); /* 7 дней в неделе */
+}
+
+.calendar__day {
+  display: -ms-grid;
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(60px, 1fr)); /* Автоматические строки */
+  border: 0.2px solid #ccc;
+}
+
+.calendar__time-slot {
+  border-top: 1px solid #ccc;
+  height: 60px;
+}
+
+.calendar__week-container {
+  position: relative;
+}
+
+.calendar {
+  padding-bottom: 5px;
+}
+
+.calendar__body {
+  margin-top: 150px;
+}
+
+.calendar__time-scale {
+  color: rgb(101, 101, 101);
+  padding: 0px 15px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.calendar__time-scale .time-slot {
+  padding-bottom: 60px;
+  height: 21px;
+}
+
+.modal__content .create-event {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.modal__content .create-event .create-event__close-btn {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  border: none;
+  font-size: 20px;
+  padding: 8px 14px;
+  border-radius: 25px;
+  line-height: 20px;
+}
+.modal__content .create-event .event-form {
+  padding-right: 35px;
+  padding-left: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.modal__content .create-event .event-form .event-form__field {
+  margin-bottom: 15px;
+  border: none;
+}
+.modal__content .create-event .event-form .event-form__field:nth-child(2) {
+  height: 36px;
+  font-size: 32px;
+}
+.modal__content .create-event .event-form .event-form__time .event-form__field {
+  font-size: 16px;
+}
+.modal__content .create-event .event-form .event-form__submit-btn {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  border-radius: 25px;
+  border: none;
+  padding: 8px 16px;
+}
+
+.modal__content {
+  z-index: 100;
+}
+
+.popup__content {
+  z-index: 100;
+}
+
+.delete-event-btn {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  border-radius: 25px;
+  border: none;
+  padding: 8px 16px;
+}
+
+.close-pop {
+  font-size: 20px;
+  padding: 8px 14px;
+  border-radius: 25px;
+  line-height: 20px;
+  border: none;
+}
+
+.event-info__title {
+  font-size: 36px;
+}
+
+.event {
+  background-color: rgb(127, 255, 212);
+  width: 100%;
+  z-index: 1;
+  position: absolute;
+  border-radius: 15px;
+}
+.event .event__time {
+  color: rgb(223, 112, 112);
+  padding: 2% 4%;
+}
+.event .event__title {
+  color: black;
+  padding: 2% 4%;
+}
+
+.calendar__time-slot {
+  position: relative;
+}
+
+.popup__content {
+  top: 30%;
+  left: 35%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 300px;
+  height: 200px;
+}
+.popup__content .btn-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.popup__content .btn-box .delete-event-btn {
+  margin-bottom: 15px;
+}
+.popup__content .btn-box .close-pop {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+.popup__content .event-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.popup__content .event-info .event-info__title {
+  overflow: hidden;
+}
+
+.event-info__description {
+  overflow: scroll;
+}
+
+.event {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.event .event__time {
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+}

@@ -1,0 +1,59 @@
+// стили отображаемого в календаре события
+.event {
+    background-color: rgb(127, 255, 212);
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    border-radius: 15px;
+    .event__time{
+        color: rgb(223, 112, 112);
+        padding: 2% 4%;
+    }
+    .event__title{
+        color: black;
+        padding: 2% 4%;
+    }
+}
+.calendar__time-slot{
+    position: relative;
+}
+
+.popup__content {
+    top: 30%;
+    left: 35%;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 200px;
+    .btn-box{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .delete-event-btn{
+            margin-bottom: 15px;
+        }
+        .close-pop{
+            align-self: flex-start;
+        }
+    }
+    .event-info{
+        display: flex;
+        flex-direction: column;
+        .event-info__title{
+            overflow: hidden;
+        }
+    }
+}
+
+.event-info__description{
+    overflow: scroll;
+}
+
+.event {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .event__time{
+        align-self: flex-start;
+    }
+}

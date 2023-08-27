@@ -1,0 +1,67 @@
+// стили формы события внутри модального окна
+.modal__content {
+    .create-event {
+        display: flex;
+        flex-direction: column;
+        .create-event__close-btn{
+            align-self: flex-end;
+            border: none;
+            font-size: 20px;
+            padding: 8px 14px ;
+            border-radius: 25px;
+            line-height: 20px;
+        }
+        .event-form {
+            padding-right: 35px;
+            padding-left: 35px;
+            display: flex;
+            flex-direction: column;
+            .event-form__field {
+                margin-bottom: 15px;
+                border: none;
+            }
+            .event-form__field:nth-child(2){
+                height: 36px;
+                font-size: 32px;
+            }
+            .event-form__time{
+                .event-form__field{
+                    font-size: 16px;
+                }
+            }
+
+            .event-form__submit-btn{
+                align-self: flex-end;
+                border-radius: 25px;
+                border: none;
+                padding: 8px 16px;
+            }
+        }
+    }
+}
+
+.modal__content {
+    z-index: 100;
+}
+
+.popup__content {
+    z-index: 100;
+}
+
+.delete-event-btn{
+    align-self: flex-end;
+    border-radius: 25px;
+    border: none;
+    padding: 8px 16px;
+}
+
+.close-pop{
+    font-size: 20px;
+    padding: 8px 14px ;
+    border-radius: 25px;
+    line-height: 20px;
+    border: none;
+}
+.event-info__title{
+    font-size: 36px;
+}

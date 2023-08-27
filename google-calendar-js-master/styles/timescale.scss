@@ -1,0 +1,11 @@
+// стили боковой временной шкалы
+.calendar__time-scale {
+    color: rgb(101, 101, 101);;
+    padding: 0px 15px;
+    display: inline-flex;
+    flex-direction: column;
+    .time-slot {
+        padding-bottom: 60px;
+        height: 21px;
+    }
+}

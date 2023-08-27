@@ -1,0 +1,72 @@
+// стили навигации
+.header {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     background-color: #ffffff; /* Цвет фона шапки */
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для стилизации */
+     z-index: 10;
+     color: rgb(0, 0, 0);
+   padding: 15px 60px;
+   display: flex;
+   align-items: center;
+   .navigation__displayed-month{
+     font-size: 20px;
+   }
+   .create-event-btn {
+     color: #FFF;
+     background-image: linear-gradient(45deg, #0012d9, #50a7ff);
+     font-weight:500;
+        margin-right: 30px;
+        border-radius: 25px;
+        i {
+            margin-right: 5px;
+        }
+   }
+   .navigation__today-btn {
+     font-weight:600;
+     border-radius: 25px;
+        margin-right: 5px;
+   }
+}
+
+.calendar__header {
+     position: fixed;
+     top: 60px;
+     left: 0;
+     width: 100%;
+     z-index: 10;
+     background-color: #ffffff; /* Цвет фона шапки */
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для стилизации */
+     color: rgb(101, 101, 101);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding-left: 40px;
+     padding-bottom: 10px;
+     gap: 120px;
+     .calendar__day-label {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 70px;
+          .day-label__day-name {
+               padding-top: 10px;
+               font-size: 24px;
+          }
+          .calendar__day-label :last-child{
+          }
+     }
+}
+
+.navigation__nav-icon{
+     color: #535353;
+}
+.todayIs {
+ color: #FFF;
+ border-radius: 50%;
+ background-image: linear-gradient(45deg, #0012d9, #50a7ff);
+ width: 70px;
+ height: 70px;
+}
